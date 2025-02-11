@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://cc4n0qa1qy0n7"]
+
+[ext_resource type="Texture2D" uid="uid://b55m4bat87dld" path="res://Assets/Items/Arcade - Super Pang - Balloons.png" id="1_hcfrj"]
+
+[sub_resource type="Shader" id="Shader_b3t4h"]
+code = "shader_type canvas_item;
+
+void fragment() {
+    vec4 tex_color = texture(TEXTURE, UV);
+    
+    vec3 target_color = vec3(132.0 / 255.0, 4.0 / 255.0, 252.0 / 255.0);
+    float threshold = 0.3;
+
+    float diff = distance(tex_color.rgb, target_color);
+    if (diff < threshold) {
+        tex_color.a = 0.0;
+    }
+
+    COLOR = tex_color;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_chife"]
+shader = SubResource("Shader_b3t4h")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyc3t"]
+atlas = ExtResource("1_hcfrj")
+region = Rect2(0, 0, 67, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7lx3r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyc3t")
+}],
+"loop": true,
+"name": &"image",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dylno"]
+radius = 26.0
+height = 64.0
+
+[node name="ball" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_chife")
+sprite_frames = SubResource("SpriteFrames_7lx3r")
+animation = &"image"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_dylno")
