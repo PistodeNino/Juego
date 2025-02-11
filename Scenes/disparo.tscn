@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://de8hdpd8gfwl0"]
+
+[ext_resource type="Texture2D" uid="uid://b58qjmf7e2ekl" path="res://Assets/Items/Player Enemies  Miscellaneous.png" id="1_c7xwj"]
+[ext_resource type="Script" path="res://Scenes/disparo.gd" id="1_gdrfh"]
+
+[sub_resource type="Shader" id="Shader_i4okl"]
+code = "shader_type canvas_item;
+
+void fragment() {
+    vec4 tex_color = texture(TEXTURE, UV);
+    
+    // Color verde aproximado a eliminar
+    vec3 target_color = vec3(0.0, 1.0, 0.0); // RGB(0, 255, 0)
+    float threshold = 0.3; // Ajusta la tolerancia
+
+    float diff = distance(tex_color.rgb, target_color);
+    if (diff < threshold) {
+        tex_color.a = 0.0; // Hace transparente el color verde
+    }
+
+    COLOR = tex_color;
+}
+
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b3noh"]
+shader = SubResource("Shader_i4okl")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6u6l"]
+atlas = ExtResource("1_c7xwj")
+region = Rect2(193, 12, 8, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_na3s5"]
+atlas = ExtResource("1_c7xwj")
+region = Rect2(201, 12, 8, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qytj7"]
+atlas = ExtResource("1_c7xwj")
+region = Rect2(209, 12, 8, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3px2q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6u6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_na3s5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qytj7")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 10.0
+}]
+
+[node name="Disparo" type="Area2D"]
+script = ExtResource("1_gdrfh")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_b3noh")
+sprite_frames = SubResource("SpriteFrames_3px2q")
+animation = &"shoot"
+frame_progress = 0.74558

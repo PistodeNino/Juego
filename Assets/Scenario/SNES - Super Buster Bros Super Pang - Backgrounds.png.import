@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r5oa8hgpavp2"
-path="res://.godot/imported/SNES - Super Buster Bros Super Pang - Backgrounds.png-b7b5086435ff466920c7c145dcfd66c2.ctex"
+path="res://.godot/imported/SNES - Super Buster Bros Super Pang - Backgrounds.png-93abe7ef7c83edb4f67d536bcdfc828a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenario/SNES - Super Buster Bros Super Pang - Backgrounds.png"
-dest_files=["res://.godot/imported/SNES - Super Buster Bros Super Pang - Backgrounds.png-b7b5086435ff466920c7c145dcfd66c2.ctex"]
+source_file="res://Assets/Scenario/SNES - Super Buster Bros Super Pang - Backgrounds.png"
+dest_files=["res://.godot/imported/SNES - Super Buster Bros Super Pang - Backgrounds.png-93abe7ef7c83edb4f67d536bcdfc828a.ctex"]
 
 [params]
 
