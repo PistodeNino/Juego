@@ -11,3 +11,5 @@ func _ready():
 	
 	
 	linear_velocity = Vector2(lateral_force, 0)  
+	
+	
