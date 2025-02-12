@@ -14,6 +14,10 @@ config/name="Super_Pang"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_height=864
+
 [input]
 
 move_right={
