@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpwrbhw5jmnmt"
+path="res://.godot/imported/04. Stage 01 (Hong Kong).mp3-81cb0b3138ea40813294bf3eae4a7400.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Scenarios/04. Stage 01 (Hong Kong).mp3"
+dest_files=["res://.godot/imported/04. Stage 01 (Hong Kong).mp3-81cb0b3138ea40813294bf3eae4a7400.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

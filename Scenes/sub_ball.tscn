@@ -1,14 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://xmu54ygch3o5"]
+[gd_scene load_steps=8 format=3 uid="uid://boqw8o2bsi4cj"]
 
-[ext_resource type="Script" path="res://Scenes/ball.gd" id="1_0fhcj"]
-[ext_resource type="Shader" path="res://Scenes/ball.gdshader" id="1_4dhhw"]
-[ext_resource type="Texture2D" uid="uid://b55m4bat87dld" path="res://Assets/Items/Arcade - Super Pang - Balloons.png" id="1_hcfrj"]
+[ext_resource type="Script" path="res://Scenes/ball.gd" id="1_hum70"]
+[ext_resource type="Shader" path="res://Scenes/ball.gdshader" id="2_qcfg7"]
+[ext_resource type="Texture2D" uid="uid://b55m4bat87dld" path="res://Assets/Items/Arcade - Super Pang - Balloons.png" id="3_24i3l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_57ty1"]
-shader = ExtResource("1_4dhhw")
+shader = ExtResource("2_qcfg7")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jodvg"]
-atlas = ExtResource("1_hcfrj")
+atlas = ExtResource("3_24i3l")
 region = Rect2(0, 6, 67, 55)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7g4v4"]
@@ -27,16 +27,14 @@ radius = 32.0762
 
 [node name="Ball" type="RigidBody2D"]
 linear_damp_mode = 1
-script = ExtResource("1_0fhcj")
+script = ExtResource("1_hum70")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_57ty1")
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_7g4v4")
 animation = &"image"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.8, 0.2)
 rotation = 1.5708
-scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_xiam1")
