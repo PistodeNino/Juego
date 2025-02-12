@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://de8hdpd8gfwl0"]
+[gd_scene load_steps=10 format=3 uid="uid://de8hdpd8gfwl0"]
 
 [ext_resource type="Texture2D" uid="uid://b58qjmf7e2ekl" path="res://Assets/Items/Player Enemies  Miscellaneous.png" id="1_c7xwj"]
 [ext_resource type="Script" path="res://Scenes/disparo.gd" id="1_gdrfh"]
@@ -60,6 +60,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjxro"]
+size = Vector2(6, 24)
+
 [node name="Disparo" type="Area2D"]
 script = ExtResource("1_gdrfh")
 
@@ -67,4 +70,9 @@ script = ExtResource("1_gdrfh")
 material = SubResource("ShaderMaterial_b3noh")
 sprite_frames = SubResource("SpriteFrames_3px2q")
 animation = &"shoot"
-frame_progress = 0.74558
+autoplay = "shoot"
+frame_progress = 0.00342866
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_xjxro")

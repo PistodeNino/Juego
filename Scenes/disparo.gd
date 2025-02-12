@@ -5,7 +5,7 @@ var pixelsPerSecond : int = 180
 
 # 
 func _ready() -> void:
-	pass 
+	$Sprite.play("shoot")
 
 
 
