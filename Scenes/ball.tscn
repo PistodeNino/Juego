@@ -4,33 +4,36 @@
 [ext_resource type="Shader" path="res://Scenes/ball.gdshader" id="1_4dhhw"]
 [ext_resource type="Texture2D" uid="uid://b55m4bat87dld" path="res://Assets/Items/Arcade - Super Pang - Balloons.png" id="1_hcfrj"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ccy0j"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_57ty1"]
 shader = ExtResource("1_4dhhw")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_olji5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jodvg"]
 atlas = ExtResource("1_hcfrj")
 region = Rect2(0, 6, 67, 55)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_312uq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_7g4v4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_olji5")
+"texture": SubResource("AtlasTexture_jodvg")
 }],
 "loop": true,
-"name": &"default",
+"name": &"image",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xe50p"]
-radius = 31.3209
+[sub_resource type="CircleShape2D" id="CircleShape2D_xiam1"]
+radius = 32.0762
 
-[node name="ball" type="Area2D"]
+[node name="Ball" type="RigidBody2D"]
 script = ExtResource("1_0fhcj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-material = SubResource("ShaderMaterial_ccy0j")
-sprite_frames = SubResource("SpriteFrames_312uq")
+material = SubResource("ShaderMaterial_57ty1")
+sprite_frames = SubResource("SpriteFrames_7g4v4")
+animation = &"image"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_xe50p")
+position = Vector2(0.8, 0.2)
+rotation = 1.5708
+shape = SubResource("CircleShape2D_xiam1")

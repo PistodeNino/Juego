@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbmrdtkb8a0i"]
+
+[ext_resource type="Shader" path="res://shoot.gdshader" id="1_0f5vs"]
+[ext_resource type="Texture2D" uid="uid://b58qjmf7e2ekl" path="res://Assets/Items/Player Enemies  Miscellaneous.png" id="2_16486"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8dpbr"]
+shader = ExtResource("1_0f5vs")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6u6l"]
+atlas = ExtResource("2_16486")
+region = Rect2(193, 12, 8, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_na3s5"]
+atlas = ExtResource("2_16486")
+region = Rect2(201, 12, 8, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qytj7"]
+atlas = ExtResource("2_16486")
+region = Rect2(209, 12, 8, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qjent"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6u6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_na3s5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qytj7")
+}],
+"loop": true,
+"name": &"image",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27glf"]
+size = Vector2(6, 24)
+
+[node name="shoot" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_8dpbr")
+sprite_frames = SubResource("SpriteFrames_qjent")
+animation = &"image"
+autoplay = "image"
+frame_progress = 0.831961
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_27glf")

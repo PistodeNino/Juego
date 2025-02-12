@@ -1,11 +1,13 @@
-extends Area2D
+extends RigidBody2D
 
+@export var bounciness: float = 1  
+@export var lateral_force: float = 500  
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _ready():
+	
+	physics_material_override = PhysicsMaterial.new()
+	physics_material_override.bounce = bounciness 
+	physics_material_override.friction = 0
+	
+	
+	linear_velocity = Vector2(lateral_force, 0)  
