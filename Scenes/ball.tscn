@@ -26,6 +26,7 @@ animations = [{
 radius = 32.0762
 
 [node name="Ball" type="RigidBody2D"]
+linear_damp_mode = 1
 script = ExtResource("1_0fhcj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
