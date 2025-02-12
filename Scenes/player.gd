@@ -19,6 +19,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("fire") and can_shoot:
 		$AnimatedSprite2D.play("fire")
+		$AudioStreamPlayer2D.play()		
 		fire()
 
 	move_and_slide()
