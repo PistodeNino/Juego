@@ -9,7 +9,7 @@
 [node name="StaticBody2D" parent="." instance=ExtResource("2_b6mhh")]
 
 [node name="Player" parent="." instance=ExtResource("1_jdq1c")]
-position = Vector2(504, 650)
+position = Vector2(606, 770)
 
-[node name="RigidBody2D" parent="." instance=ExtResource("3_vphex")]
-position = Vector2(764, 162)
+[node name="ball" parent="." instance=ExtResource("3_vphex")]
+position = Vector2(870, 140)
