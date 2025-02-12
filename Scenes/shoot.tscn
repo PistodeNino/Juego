@@ -1,7 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://t5c1x0n5hxj"]
+[gd_scene load_steps=10 format=3 uid="uid://d1xmy0hone6hy"]
 
-[ext_resource type="Script" path="res://Scenes/disparo.gd" id="1_wf7ft"]
 [ext_resource type="Texture2D" uid="uid://b58qjmf7e2ekl" path="res://Assets/Items/Player Enemies  Miscellaneous.png" id="2_ev2t2"]
+
+[sub_resource type="GDScript" id="GDScript_f3yax"]
+script/source = "extends Area2D
+
+var pixelsPerSecond : int = 180
+
+
+# 
+func _ready() -> void:
+	$Sprite.play(\"shoot\")
+
+
+
+func _process(delta: float) -> void:
+	position.y -= pixelsPerSecond * delta
+	
+	if position.y < 0:
+		queue_free()
+"
 
 [sub_resource type="Shader" id="Shader_i4okl"]
 code = "shader_type canvas_item;
@@ -60,7 +78,7 @@ size = Vector2(6.2, 24.4)
 
 [node name="shoot" type="Area2D"]
 scale = Vector2(5, 5)
-script = ExtResource("1_wf7ft")
+script = SubResource("GDScript_f3yax")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_b3noh")

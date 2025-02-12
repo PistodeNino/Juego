@@ -27,6 +27,7 @@ size = Vector2(60, 788)
 size = Vector2(1038, 31.5)
 
 [node name="StaticBody2D" type="StaticBody2D"]
+collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(579, 431.75)
