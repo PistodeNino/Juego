@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bl2t4b70xua7p"]
+[gd_scene load_steps=8 format=3 uid="uid://t7psbjwjva4j"]
 
-[ext_resource type="Texture2D" uid="uid://r5oa8hgpavp2" path="res://Assets/Scenario/SNES - Super Buster Bros Super Pang - Backgrounds.png" id="1_a16qq"]
+[ext_resource type="Texture2D" uid="uid://r5oa8hgpavp2" path="res://Assets/Scenario/SNES - Super Buster Bros Super Pang - Backgrounds.png" id="1_ahe8h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ghh57"]
-atlas = ExtResource("1_a16qq")
+atlas = ExtResource("1_ahe8h")
 region = Rect2(0, 0, 268, 201)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2cwpi"]
@@ -29,7 +29,7 @@ size = Vector2(1038, 31.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fi1n"]
 size = Vector2(1161, 83)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="walls" type="StaticBody2D"]
 collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
