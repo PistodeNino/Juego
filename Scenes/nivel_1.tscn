@@ -1,21 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccvb5q34262k2"]
+[gd_scene load_steps=6 format=3 uid="uid://ccvb5q34262k2"]
 
 [ext_resource type="PackedScene" uid="uid://yhloifahkauv" path="res://Scenes/player.tscn" id="1_jdq1c"]
-[ext_resource type="PackedScene" uid="uid://t7psbjwjva4j" path="res://Scenes/walls.tscn" id="1_mtvgq"]
-[ext_resource type="PackedScene" uid="uid://xmu54ygch3o5" path="res://Scenes/ball.tscn" id="4_owa6e"]
+[ext_resource type="PackedScene" uid="uid://t7psbjwjva4j" path="res://Scenes/walls_1.tscn" id="1_mtvgq"]
 [ext_resource type="AudioStream" uid="uid://dpwrbhw5jmnmt" path="res://Assets/Music/Scenarios/04. Stage 01 (Hong Kong).mp3" id="4_xgqv4"]
+[ext_resource type="PackedScene" uid="uid://c70n7ilvpdux2" path="res://Scenes/ball_3.tscn" id="4_xopp3"]
+[ext_resource type="PackedScene" uid="uid://do2we66mppf3v" path="res://Scenes/ball_3r.tscn" id="5_tsjra"]
 
 [node name="Nivel_1" type="Node2D"]
 
-[node name="walls" parent="." instance=ExtResource("1_mtvgq")]
+[node name="walls_1" parent="." instance=ExtResource("1_mtvgq")]
 position = Vector2(0, -1)
 
 [node name="Player" parent="." instance=ExtResource("1_jdq1c")]
-position = Vector2(589, 772)
+position = Vector2(605, 777)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_xgqv4")
 autoplay = true
 
-[node name="Ball_1" parent="." instance=ExtResource("4_owa6e")]
-position = Vector2(550, 165)
+[node name="Ball_4" parent="." instance=ExtResource("4_xopp3")]
+position = Vector2(157, 157)
+
+[node name="Ball_5" parent="." instance=ExtResource("4_xopp3")]
+position = Vector2(207, 207)
+
+[node name="Ball_6" parent="." instance=ExtResource("4_xopp3")]
+position = Vector2(257, 257)
+
+[node name="Ball_3r2" parent="." instance=ExtResource("5_tsjra")]
+visible = true
+position = Vector2(1017, 157)
+
+[node name="Ball_3r3" parent="." instance=ExtResource("5_tsjra")]
+visible = true
+position = Vector2(917, 257)
+
+[node name="Ball_3r4" parent="." instance=ExtResource("5_tsjra")]
+visible = true
+position = Vector2(967, 207)

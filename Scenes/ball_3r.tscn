@@ -26,6 +26,7 @@ animations = [{
 radius = 32.0762
 
 [node name="Ball_3r" type="RigidBody2D"]
+visible = false
 collision_layer = 2
 linear_damp_mode = 1
 script = ExtResource("1_565t5")
