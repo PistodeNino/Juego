@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://yhloifahkauv" path="res://Scenes/player.tscn" id="1_jdq1c"]
 [ext_resource type="PackedScene" uid="uid://t7psbjwjva4j" path="res://Scenes/walls.tscn" id="1_mtvgq"]
+[ext_resource type="PackedScene" uid="uid://xmu54ygch3o5" path="res://Scenes/ball.tscn" id="4_owa6e"]
 [ext_resource type="AudioStream" uid="uid://dpwrbhw5jmnmt" path="res://Assets/Music/Scenarios/04. Stage 01 (Hong Kong).mp3" id="4_xgqv4"]
-[ext_resource type="PackedScene" uid="uid://boqw8o2bsi4cj" path="res://Scenes/ball_2.tscn" id="5_pf2i5"]
 
 [node name="Nivel_1" type="Node2D"]
 
@@ -17,5 +17,5 @@ position = Vector2(589, 772)
 stream = ExtResource("4_xgqv4")
 autoplay = true
 
-[node name="Ball_2" parent="." instance=ExtResource("5_pf2i5")]
-position = Vector2(585, 212)
+[node name="Ball_1" parent="." instance=ExtResource("4_owa6e")]
+position = Vector2(550, 165)
