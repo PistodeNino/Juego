@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt73b4xj8h4ia"]
+[gd_scene load_steps=4 format=3 uid="uid://bt73b4xj8h4ia"]
 
 [ext_resource type="Texture2D" uid="uid://cc5gx5r4puv2s" path="res://Assets/Items/block.png" id="1_d1uw4"]
+[ext_resource type="Script" path="res://Scenes/block.gd" id="1_talwu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whbt0"]
 size = Vector2(178.5, 36)
 
-[node name="block" type="Area2D"]
+[node name="block" type="StaticBody2D"]
 collision_layer = 3
 collision_mask = 3
+script = ExtResource("1_talwu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_d1uw4")
