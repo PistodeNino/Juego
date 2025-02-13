@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://do2we66mppf3v"]
+[gd_scene load_steps=8 format=3 uid="uid://cn5t85ctrq28j"]
 
 [ext_resource type="Script" path="res://Scenes/ball_3r.gd" id="1_565t5"]
 [ext_resource type="Shader" path="res://Scenes/ball.gdshader" id="2_lq0ol"]
@@ -26,7 +26,6 @@ animations = [{
 radius = 32.0762
 
 [node name="Ball_3r" type="RigidBody2D"]
-visible = false
 collision_layer = 2
 linear_damp_mode = 1
 script = ExtResource("1_565t5")
@@ -37,6 +36,7 @@ sprite_frames = SubResource("SpriteFrames_7g4v4")
 animation = &"image"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0.8, 0.2)
 rotation = 1.5708
 shape = SubResource("CircleShape2D_xiam1")

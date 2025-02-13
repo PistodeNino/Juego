@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2x1mjdc8iryw"]
+
+[ext_resource type="Texture2D" uid="uid://r5oa8hgpavp2" path="res://Assets/Scenario/SNES - Super Buster Bros Super Pang - Backgrounds.png" id="1_4ge8y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ciec"]
+atlas = ExtResource("1_4ge8y")
+region = Rect2(268, 0, 268, 201)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h1jpc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ciec")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ts0la"]
+size = Vector2(36.25, 795.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pk3sm"]
+size = Vector2(66, 788)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7oat"]
+size = Vector2(1038, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fi1n"]
+size = Vector2(1161, 83)
+
+[node name="walls_2" type="StaticBody2D"]
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(578, 432.5)
+scale = Vector2(4.29104, 4.29353)
+sprite_frames = SubResource("SpriteFrames_h1jpc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1106.13, 441)
+shape = SubResource("RectangleShape2D_ts0la")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(20, 458)
+shape = SubResource("RectangleShape2D_pk3sm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(582, 843.5)
+shape = SubResource("RectangleShape2D_k7oat")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(561.5, 24.5)
+shape = SubResource("RectangleShape2D_0fi1n")

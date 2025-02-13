@@ -8,9 +8,7 @@ script/source = "extends Area2D
 
 class_name Shoot
 
-
 var pixelsPerSecond: int = 180
-
 signal bullet_freed
 
 func _ready() -> void:
@@ -27,35 +25,29 @@ func _on_Bullet_body_entered(body: Node) -> void:
 	emit_signal(\"bullet_freed\")
 	queue_free()
 
-	if body.is_in_group(\"small\") || body.is_in_group(\"block\"):
-		emit_signal(\"bullet_freed\")
+	if body.is_in_group(\"small\") or body.is_in_group(\"block\"):
 		body.queue_free()
 	elif body.is_in_group(\"medium\"):
-		emit_signal(\"bullet_freed\")
-		var parent = body.get_parent()
-		if parent:
-			var ball_3 = preload(\"res://Scenes/ball_3.tscn\").instantiate()
-			ball_3.global_position = body.global_position + Vector2(-10, -100) 
-			ball_3.linear_velocity = Vector2(-ball_3.lateral_force, 0) 
-			parent.add_child(ball_3)
-			var ball_3r = preload(\"res://Scenes/ball_3r.tscn\").instantiate()
-			ball_3r.global_position = body.global_position + Vector2(10, -100)  
-			ball_3r.linear_velocity = Vector2(ball_3r.lateral_force, 0)  
-			parent.add_child(ball_3r)
-		body.queue_free()
+		_spawn_split_balls(body, \"res://Scenes/ball_3.tscn\")
 	elif body.is_in_group(\"big\"):
-		emit_signal(\"bullet_freed\")
-		var parent = body.get_parent()
-		if parent:
-			var ball_2 = preload(\"res://Scenes/ball_2.tscn\").instantiate()
-			ball_2.global_position = body.global_position + Vector2(-10, -100) 
-			ball_2.linear_velocity = Vector2(-ball_2.lateral_force, 0) 
-			parent.add_child(ball_2)
-			var ball_2r = preload(\"res://Scenes/ball_2r.tscn\").instantiate()
-			ball_2r.global_position = body.global_position + Vector2(10, -100)  
-			ball_2r.linear_velocity = Vector2(ball_2r.lateral_force, 0)  
-			parent.add_child(ball_2r)
-		body.queue_free()
+		_spawn_split_balls(body, \"res://Scenes/ball_2.tscn\")
+
+func _spawn_split_balls(body: Node, scene_path: String) -> void:
+	var parent = body.get_parent()
+	if parent:
+		var ball_left = load(scene_path).instantiate()
+		var ball_right = load(scene_path.replace(\".tscn\", \"r.tscn\")).instantiate()
+
+		ball_left.global_position = body.global_position + Vector2(-10, -100)
+		ball_right.global_position = body.global_position + Vector2(10, -100)
+
+		ball_left.linear_velocity = Vector2(-ball_left.lateral_force, 0)
+		ball_right.linear_velocity = Vector2(ball_right.lateral_force, 0)
+
+		parent.add_child(ball_left)
+		parent.add_child(ball_right)
+
+	body.queue_free()
 "
 
 [sub_resource type="Shader" id="Shader_i4okl"]

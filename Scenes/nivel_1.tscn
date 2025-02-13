@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://t7psbjwjva4j" path="res://Scenes/walls_1.tscn" id="1_mtvgq"]
 [ext_resource type="AudioStream" uid="uid://dpwrbhw5jmnmt" path="res://Assets/Music/Scenarios/04. Stage 01 (Hong Kong).mp3" id="4_xgqv4"]
 [ext_resource type="PackedScene" uid="uid://c70n7ilvpdux2" path="res://Scenes/ball_3.tscn" id="4_xopp3"]
-[ext_resource type="PackedScene" uid="uid://do2we66mppf3v" path="res://Scenes/ball_3r.tscn" id="5_tsjra"]
+[ext_resource type="PackedScene" uid="uid://cn5t85ctrq28j" path="res://Scenes/ball_3r.tscn" id="5_tsjra"]
 [ext_resource type="PackedScene" uid="uid://bt73b4xj8h4ia" path="res://Scenes/block.tscn" id="6_rv8u8"]
 
 [node name="Nivel_1" type="Node2D"]
