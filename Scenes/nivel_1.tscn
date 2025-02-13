@@ -29,15 +29,12 @@ position = Vector2(207, 207)
 position = Vector2(257, 257)
 
 [node name="Ball_3r2" parent="." instance=ExtResource("5_tsjra")]
-visible = true
 position = Vector2(1017, 157)
 
 [node name="Ball_3r3" parent="." instance=ExtResource("5_tsjra")]
-visible = true
 position = Vector2(917, 257)
 
 [node name="Ball_3r4" parent="." instance=ExtResource("5_tsjra")]
-visible = true
 position = Vector2(967, 207)
 
 [node name="block" parent="." instance=ExtResource("6_rv8u8")]

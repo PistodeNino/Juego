@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rywm7anxvkxo"
+path="res://.godot/imported/05. Stage 02-04 (Java).mp3-eb560cd65700a7036be618a62390c210.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Scenarios/05. Stage 02-04 (Java).mp3"
+dest_files=["res://.godot/imported/05. Stage 02-04 (Java).mp3-eb560cd65700a7036be618a62390c210.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
