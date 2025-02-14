@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsaa6nt63j1aj"]
+[gd_scene load_steps=7 format=3 uid="uid://dsaa6nt63j1aj"]
 
+[ext_resource type="Script" path="res://Scenes/nivel_2.gd" id="1_hvn88"]
 [ext_resource type="AudioStream" uid="uid://rywm7anxvkxo" path="res://Assets/Music/Scenarios/05. Stage 02-04 (Java).mp3" id="3_1mdxd"]
 [ext_resource type="PackedScene" uid="uid://yhloifahkauv" path="res://Scenes/player.tscn" id="3_w7hki"]
 [ext_resource type="PackedScene" uid="uid://b2x1mjdc8iryw" path="res://Scenes/walls_2.tscn" id="4_507he"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bt73b4xj8h4ia" path="res://Scenes/block.tscn" id="5_g5lmh"]
 
 [node name="Nivel_2" type="Node2D"]
+script = ExtResource("1_hvn88")
 
 [node name="walls_2" parent="." instance=ExtResource("4_507he")]
 position = Vector2(0, -1)

@@ -115,7 +115,7 @@ script = SubResource("GDScript_f3yax")
 material = SubResource("ShaderMaterial_b3noh")
 sprite_frames = SubResource("SpriteFrames_3px2q")
 animation = &"shoot"
-frame_progress = 0.74558
+frame_progress = 0.581034
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

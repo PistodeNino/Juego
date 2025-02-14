@@ -5,9 +5,17 @@ extends RigidBody2D
 
 func _ready():
 	add_to_group("small")
+	print("Bola añadida al nivel.")
 	physics_material_override = PhysicsMaterial.new()
 	physics_material_override.bounce = bounciness 
 	physics_material_override.friction = 0
 	
 	
 	linear_velocity = Vector2(lateral_force, 0)
+	
+func _exit_tree():
+	print("Bola eliminada.")
+	if get_parent():  # Evita errores si el padre no existe
+		get_parent().eliminar_bola()
+
+	
