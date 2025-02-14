@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 @export var bounciness: float = 1  
-@export var lateral_force: float = -500  
+@export var lateral_force: float = -200  
 
 func _ready():
 	add_to_group("medium")

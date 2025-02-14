@@ -22,22 +22,22 @@ stream = ExtResource("4_xgqv4")
 autoplay = true
 
 [node name="Ball_4" parent="." instance=ExtResource("4_xopp3")]
-position = Vector2(157, 157)
+position = Vector2(159, 325)
 
 [node name="Ball_5" parent="." instance=ExtResource("4_xopp3")]
-position = Vector2(207, 207)
+position = Vector2(209, 375)
 
 [node name="Ball_6" parent="." instance=ExtResource("4_xopp3")]
-position = Vector2(257, 257)
+position = Vector2(259, 425)
 
 [node name="Ball_3r2" parent="." instance=ExtResource("5_tsjra")]
-position = Vector2(1017, 157)
+position = Vector2(997, 340)
 
 [node name="Ball_3r3" parent="." instance=ExtResource("5_tsjra")]
-position = Vector2(917, 257)
+position = Vector2(897, 440)
 
 [node name="Ball_3r4" parent="." instance=ExtResource("5_tsjra")]
-position = Vector2(967, 207)
+position = Vector2(947, 390)
 
 [node name="block" parent="." instance=ExtResource("6_rv8u8")]
-position = Vector2(600, 150)
+position = Vector2(600, 221)

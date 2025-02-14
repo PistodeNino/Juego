@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 @export var bounciness: float = 1  
-@export var lateral_force: float = 500  
+@export var lateral_force: float = 200  
 
 func _ready():
 	add_to_group("small")
@@ -13,9 +13,10 @@ func _ready():
 	
 	linear_velocity = Vector2(lateral_force, 0)
 	
-func _exit_tree():
+func remove():
 	print("Bola eliminada.")
 	if get_parent():  # Evita errores si el padre no existe
 		get_parent().eliminar_bola()
+	queue_free()
 
 	

@@ -1,9 +1,9 @@
 extends Node2D
 
-var bolas_restantes = 4
+var bolas_restantes = 8
 
 func _ready():
-	print("Nivel 1 iniciado con ", bolas_restantes, " bolas.")
+	print("Nivel 3 iniciado con ", bolas_restantes, " bolas.")
 
 # Función para restar bolas cuando se eliminan
 func eliminar_bola():
@@ -12,4 +12,4 @@ func eliminar_bola():
 	
 	if bolas_restantes == 0:
 		print("Todas las bolas eliminadas. Cambiando de nivel...")
-		get_tree().change_scene_to_file("res://Scenes/nivel_3.tscn")
+		get_tree().change_scene_to_file("res://Scenes/nivel_1.tscn")
