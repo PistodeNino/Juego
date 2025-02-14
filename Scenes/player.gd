@@ -10,6 +10,7 @@ var audio_player: AudioStreamPlayer2D
 func _ready() -> void:
 	animated_sprite = $AnimatedSprite2D
 	audio_player = $AudioStreamPlayer2D
+	
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")

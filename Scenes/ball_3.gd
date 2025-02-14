@@ -15,7 +15,7 @@ func _ready():
 	
 func remove():
 	print("Bola eliminada.")
-	if get_parent():  # Evita errores si el padre no existe
+	if get_parent():  
 		get_parent().eliminar_bola()
 	queue_free()
 
